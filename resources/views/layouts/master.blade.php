@@ -10,12 +10,15 @@
 
     <link rel="icon" href="{{ url($setting->path_logo) }}" type="image/png">
 
-    <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="{{ asset('/AdminLTE-2/bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('/AdminLTE-2/bower_components/font-awesome/css/font-awesome.min.css') }}">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('/AdminLTE-2/dist/css/AdminLTE.min.css') }}">
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{{ asset('assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
+
     <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{ asset('/AdminLTE-2/dist/css/skins/_all-skins.min.css') }}">
@@ -70,20 +73,30 @@
     </div>
     <!-- ./wrapper -->
 
-    <!-- jQuery 3 -->
-    <script src="{{ asset('AdminLTE-2/bower_components/jquery/dist/jquery.min.js') }}"></script>
-    <!-- Bootstrap 3.3.7 -->
-    <script src="{{ asset('AdminLTE-2/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+   
     <!-- Moment -->
     <script src="{{ asset('AdminLTE-2/bower_components/moment/min/moment.min.js') }}"></script>
 
     <!-- DataTables -->
     <script src="{{ asset('AdminLTE-2/bower_components/datatables.net/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('AdminLTE-2/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
-    <!-- AdminLTE App -->
-    <script src="{{ asset('AdminLTE-2/dist/js/adminlte.min.js') }}"></script>
+    
     <!-- Validator -->
     <script src="{{ asset('js/validator.min.js') }}"></script>
+
+    <!-- jQuery -->
+<script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
+<!-- Bootstrap -->
+<script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<!-- ChartJS -->
+<script src="{{ asset('assets/plugins/chart.js/Chart.min.js') }}"></script>
+<!-- overlayScrollbars -->
+<script src="{{ asset('assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+<!-- AdminLTE -->
+<script src="{{ asset('assets/dist/js/adminlte.js') }}"></script>
+<!--cdn vueJS -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <script>
         function preview(selector, temporaryFile, width = 200)  {
