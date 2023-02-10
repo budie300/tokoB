@@ -38,8 +38,8 @@
 
     @stack('css')
 </head>
-<body class="hold-transition skin-purple-light sidebar-mini">
-    <div class="wrapper">
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
 
         @includeIf('layouts.header')
 
@@ -54,7 +54,7 @@
                 </h1>
                 <ol class="breadcrumb">
                     @section('breadcrumb')
-                        <li><a href="{{ url('/') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li><a href="{{ url('/') }}"><i class="fa fa-dashboard"></i> </a></li>
                     @show
                 </ol>
             </section>
