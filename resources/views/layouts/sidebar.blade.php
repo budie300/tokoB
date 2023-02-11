@@ -59,6 +59,7 @@
                   <p>Home</p>
                 </a>
               </li>
+              @if (auth()->user()->level == 1)
               <li class="nav-item">
                 <a href="{{ route('kategori.index') }}" class="nav-link {{ request()->is('kategori') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
@@ -118,6 +119,13 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="{{ route('laporan.index') }}" class="nav-link {{ request()->is('laporan') ? 'active' : '' }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Laporan</p>
+                </a>
+              </li>
+              @else
+              <li class="nav-item">
                 <a href="{{ route('transaksi.index') }}" class="nav-link {{ request()->is('transaksi') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Transaksi Aktif</p>
@@ -128,16 +136,11 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p>Transaksi Baru</p>
                 </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('laporan.index') }}" class="nav-link {{ request()->is('laporan') ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Laporan</p>
-                </a>
+                @endif
               </li>
             </li>
         </ul>
-
+        @if (auth()->user()->level == 1)
         <li class="nav-item">
             <a href="{{ route('user.index') }}" class="nav-link {{ request()->is('user') ? 'active' : '' }}">
               <i class="nav-icon fas fa-user"></i>
@@ -156,6 +159,8 @@
               </p>
             </a>
         </li>
+        @else
+        @endif
 
     </nav>
       <!-- /.sidebar-menu -->
